@@ -1,4 +1,3 @@
-[index.html](https://github.com/user-attachments/files/27371767/index.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -685,8 +684,8 @@
 
     /* ─── PROJECTS ─── */
     #projects .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
@@ -695,9 +694,10 @@
     .project-card {
       background: var(--panel);
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 1.5rem 3rem;
       transition: background 0.2s;
       position: relative;
     }
@@ -715,6 +715,21 @@
     }
 
     .project-card:hover::before { opacity: 1; }
+
+    .project-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .project-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      border-left: 1px solid var(--border);
+      padding-left: 3rem;
+    }
 
     .project-type {
       font-family: var(--mono);
@@ -891,38 +906,42 @@
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-type">Machine Learning · Data Science</div>
-        <div class="project-title">Cirrhosis Patient Outcome Prediction via Neural Network</div>
-        <div class="project-desc">
-          Built a binary classification neural network in TensorFlow to predict patient survival outcomes using the Mayo Clinic primary biliary cirrhosis dataset. Handled preprocessing of 418 clinical records — including missing value removal, one-hot encoding, binary mapping, and StandardScaler normalization — then trained a Sequential model with two hidden ReLU layers and a sigmoid output over 10 epochs.
-        </div>
-        <div class="project-meta">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">TensorFlow</span>
-          <span class="project-tag">Keras</span>
-          <span class="project-tag">Pandas</span>
-          <span class="project-tag">scikit-learn</span>
-          <span class="project-tag">Binary Classification</span>
-          <span class="project-tag">Neural Network</span>
-        </div>
-        <div class="project-stat-row">
-          <div class="project-stat">
-            <div class="project-stat-val">80.4%</div>
-            <div class="project-stat-label">Test Accuracy</div>
+        <div class="project-left">
+          <div class="project-type">Machine Learning · Data Science</div>
+          <div class="project-title">Cirrhosis Patient Outcome Prediction via Neural Network</div>
+          <div class="project-desc">
+            Built a binary classification neural network in TensorFlow to predict patient survival outcomes using the Mayo Clinic primary biliary cirrhosis dataset. Handled preprocessing of 418 clinical records — including missing value removal, one-hot encoding, binary mapping, and StandardScaler normalization — then trained a Sequential model with two hidden ReLU layers and a sigmoid output over 10 epochs.
           </div>
-          <div class="project-stat">
-            <div class="project-stat-val">276</div>
-            <div class="project-stat-label">Patient Records</div>
-          </div>
-          <div class="project-stat">
-            <div class="project-stat-val">77.7%</div>
-            <div class="project-stat-label">Train Accuracy</div>
+          <div class="project-meta">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">TensorFlow</span>
+            <span class="project-tag">Keras</span>
+            <span class="project-tag">Pandas</span>
+            <span class="project-tag">scikit-learn</span>
+            <span class="project-tag">Binary Classification</span>
+            <span class="project-tag">Neural Network</span>
           </div>
         </div>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-          <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/ameyer_cirrhosis.ipynb" class="project-link" target="_blank">↗ View Notebook</a>
-          <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/AMeyer_Project_A_Cirrhosis.pptx" class="project-link" target="_blank">↗ View Slides</a>
-          <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/ameyer_cirrhosis_report.pdf" class="project-link" target="_blank">↗ View Report</a>
+        <div class="project-right">
+          <div class="project-stat-row">
+            <div class="project-stat">
+              <div class="project-stat-val">80.4%</div>
+              <div class="project-stat-label">Test Accuracy</div>
+            </div>
+            <div class="project-stat">
+              <div class="project-stat-val">276</div>
+              <div class="project-stat-label">Patient Records</div>
+            </div>
+            <div class="project-stat">
+              <div class="project-stat-val">77.7%</div>
+              <div class="project-stat-label">Train Accuracy</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/ameyer_cirrhosis.ipynb" class="project-link" target="_blank">↗ View Notebook</a>
+            <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/AMeyer_Project_A_Cirrhosis.pptx" class="project-link" target="_blank">↗ View Slides</a>
+            <a href="https://github.com/angelameyer96/angelameyer96.github.io/blob/main/ameyer_cirrhosis_report.pdf" class="project-link" target="_blank">↗ View Report</a>
+          </div>
         </div>
       </div>
 
@@ -1190,3 +1209,4 @@
 
 </body>
 </html>
+[index.html](https://github.com/user-attachments/files/27371890/index.html)
